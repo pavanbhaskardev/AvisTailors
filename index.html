@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css style sheetlink -->
+
+    <!-- alpinejs cdn -->
+    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+    <!-- googlefonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+    <!-- fontawesome iconkit -->
+    <script src="https://kit.fontawesome.com/d33dc252e0.js" crossorigin="anonymous"></script>
+    <title>Avis Tailors</title>
+    <link rel="stylesheet" href="./assets/index.e3369a56.css">
+</head>
+
+<body x-data="{navbarOpen: false, scrolledFromTop: false}"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" :class="{
+'overflow-hidden': navOpen,
+'overflow-scroll': !navOpen
+}" class="bg-neutral">
+    <header class="p-2 bg-green-500 fixed w-full flex justify-between bg-primary z-40">
+        <a href="#" class="font-dmserif text-basic text-xl sm:pt-2 sm:pl-2 lg:text-2xl">AT</a>
+        <nav>
+            <button class="sm:hidden" @click="navbarOpen = !navbarOpen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 pt-1 text-basic" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <ul class="bg-primary text-basic font-poppins fixed min-h-screen bg-green-500 left-0 right-0 text-white space-y-4 p-3 transform transition duration-200 translate-x-full sm:translate-x-0 sm:relative sm:flex sm:min-h-0 sm:space-y-0 sm:space-x-4"
+                :class="{'translate-x-full': !navbarOpen, 'translate-x-0': navbarOpen}">
+                <li><a href="#home" @click="navbarOpen = false" class="text-xs">Home</a></li>
+                <li><a href="#1" @click="navbarOpen = false" class="text-xs">Our Services</a></li>
+                <li><a href="#2" @click="navbarOpen = false" class="text-xs">About Us</a></li>
+                <li><a href="#3" @click="navbarOpen = false" class="text-xs">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- this div was created for lg breakpoint -->
+    <div class="lg:grid lg:grid-cols-2">
+        <div>
+            <section id="home" class="main pt-20 px-10 sm:max-w-lg sm:mx-auto sm:pt-28 lg:pt-64">
+                <div class="heading">
+                    <h1 class="text-4xl font-bold sm:text-6xl font-dmserif text-primary lg:text-7xl">Avis Tailors</h1>
+                    <h2 class="pt-1 sm:text-xl font-poppins text-secondary text-sm lg:text-2xl font-bold">Clothing made
+                        with passion</h2>
+                </div>
+                <div class="images grid grid-cols-2 pt-4 gap-4 sm:max-w-lg sm:mx-auto sm:pt-8 lg:hidden">
+                    <div class="col-span-2"><img class="rounded-lg object-cover shadow-2xl"
+                            src="./assets/tailor.7622cd90.png" alt=""></div>
+                    <div><img class="rounded-lg object-cover shadow-2xl" src="./assets/altering.4271e604.jpg" alt="">
+                    </div>
+                    <div><img class="rounded-lg object-cover shadow-2xl" src="./assets/aboutus.4f39b607.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <div class="call-to-action px-10 py-8 sm:max-w-lg sm:mx-auto">
+                <button
+                    class="px-4 py-2 flex bg-primary text-basic rounded-lg text-xs justify-center items-center font-poppins hover:bg-[#205593]  transition ease-in-out hover:-translate-y-1 lg:py-4 lg:px-8 lg:text-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 lg:h-8 lg:w-8 animate-bounce"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+                    </svg><a href="#ourwork">Our Work</a></button>
+            </div>
+        </div>
+        <div class="hidden lg:block p-10 mt-10">
+            <div class="images-lg-breakpoint grid grid-cols-2 pt-4 gap-4">
+                <div class="col-span-2"><img class="rounded-lg object-cover shadow-2xl"
+                        src="./assets/tailor.7622cd90.png" alt=""></div>
+                <div><img class="rounded-lg object-cover w-full aspect-square shadow-2xl"
+                        src="./assets/altering.4271e604.jpg" alt=""></div>
+                <div><img class="rounded-lg object-cover w-full aspect-square shadow-2xl"
+                        src="./assets/aboutus.4f39b607.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <section class="bg-basic" id="1">
+        <div id="ourwork" class="grid lg:grid-cols-2">
+            <div class="pt-4 gap-4 sm:max-w-lg sm:mx-auto sm:pt-8">
+                <h1 class="font-dmserif text-4xl text-primary px-10 pb-5 font-bold bg-basic lg:hidden">Our Services</h1>
+                <div class="col-span-2 grid grid-cols-2 gap-4 px-10 lg:hidden">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/Shirt.5bbb98b8.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/shirt2.15a62286.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl col-span-2" src="./assets/shirt1.d4c5ac8a.jpg"
+                        alt="">
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <h1
+                        class="hidden font-dmserif text-4xl text-primary px-10 pb-5 font-bold bg-basic lg:inline-block lg:pt-24 lg:pb-20 lg:text-7xl">
+                        Our Services</h1>
+                    <h2 class="my-6 px-10 text-2xl tracking-tight font-poppins font-bold text-secondary lg:text-6xl">
+                        Shirts</h2>
+                    <p class="pb-6 px-10 font-poppins text-gray-500 md:text-lg lg:text-2xl text-[#626567]">Here in Avis
+                        Tailors we stitch shirts that fit you right, also make you feel comfortable & confident.</p>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <div class="grid grid-cols-2 gap-4 p-10">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/Shirt.5bbb98b8.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/shirt2.15a62286.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl col-span-2" src="./assets/shirt1.d4c5ac8a.jpg"
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-neutral">
+        <div class="grid lg:grid-cols-2">
+            <div class="pt-4 gap-4 sm:max-w-lg sm:mx-auto sm:pt-8">
+                <div class="grid grid-cols-2 gap-4 px-10 lg:hidden">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/suit2.b0e33d6b.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/suit1.7af54e3c.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/suit3.4a764a53.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/suit4.4dc87bc1.jpg" alt="">
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <h2
+                        class="my-6 px-10 text-2xl tracking-tight font-bold font-poppins text-secondary dark:text-white lg:pt-64 lg:text-6xl">
+                        Suits</h2>
+                    <p class="pb-6 px-10 font-poppins text-gray-500 md:text-lg lg:text-2xl text-[#626567]">We have
+                        custom suiting range. Which makes your suit fit you well & feel confident in them.</p>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <div class="grid grid-cols-2  gap-4 p-10">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/suit2.b0e33d6b.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/suit1.7af54e3c.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/suit3.4a764a53.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/suit4.4dc87bc1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-basic">
+        <div class="grid lg:grid-cols-2">
+            <div class="pt-4 gap-4 sm:max-w-lg sm:mx-auto sm:pt-8">
+                <div class="grid grid-cols-2 gap-4 px-10 lg:hidden">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/pant1.696550ee.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/pant2.78601a04.jpg" alt="">
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <h2
+                        class="my-6 px-10 text-2xl tracking-tight font-poppins font-bold text-secondary dark:text-white lg:pt-32 lg:text-6xl">
+                        Pants</h2>
+                    <p class="pb-6 px-10 font-poppins text-gray-500 md:text-lg lg:text-2xl text-[#626567]">When it comes
+                        to pants comfort is everything. We tailor pants perfectly that they fit you awesome.</p>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <div class="grid grid-cols-2 gap-4 p-10">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/pant1.696550ee.jpg" alt="">
+                    <img class="object-center rounded-lg shadow-2xl" src="./assets/pant2.78601a04.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="grid grid-cols-2 gap-4 px-10  py-5 sm:max-w-lg mx-auto lg:hidden">
+        <h1 class="col-span-2 font-dmserif font-bold text-primary text-4xl">Brands we worked with</h1>
+        <img class="p-3 md:p-8" src="./assets/linen-club-logo.63b78155.png" alt="">
+        <img class="p-3 md:p-8" src="./assets/raymond-logo.com.53e3dcb8.png" alt="">
+        <img class="p-3 md:p-8" src="./assets/the-arvind-store-logo.37b11b3b.png" alt="">
+        <img class="p-3 md:p-8" src="./assets/Pepe-Jeans-Logo.4788e1f6.svg" alt="">
+        <img class="p-3 md:p-8" src="./assets/Levi's_logo.cd436db3.png" alt="">
+        <img class="p-3 md:p-8" src="./assets/allen-solly-logo.d806ed6f.png" alt="">
+    </div>
+    <div class="hidden lg:block py-20">
+        <div class="grid grid-cols-6 gap-4 p-10 mx-auto">
+            <h1 class="col-span-6 font-dmserif font-bold text-primary text-6xl pb-16 px-16">Brands we worked with</h1>
+            <img class="p-6" src="./assets/linen-club-logo.63b78155.png" alt="">
+            <img class="p-6" src="./assets/raymond-logo.com.53e3dcb8.png" alt="">
+            <img class="p-6" src="./assets/the-arvind-store-logo.37b11b3b.png" alt="">
+            <img class="p-6" src="./assets/Pepe-Jeans-Logo.4788e1f6.svg" alt="">
+            <img class="p-6" src="./assets/Levi's_logo.cd436db3.png" alt="">
+            <img class="p-6" src="./assets/allen-solly-logo.d806ed6f.png" alt="">
+        </div>
+    </div>
+    <div class="story bg-basic" id="2">
+        <div class="grid lg:grid-cols-2">
+            <div class="pt-4 gap-4 sm:max-w-lg sm:mx-auto sm:pt-8 lg:py-32 lg:mx-16">
+                <h2 class="font-poppins text-xl text-secondary px-10 pb-2 font-bold lg:text-4xl">Since 1989</h2>
+                <h1 class="font-dmserif text-4xl text-primary px-10 pb-5 font-bold lg:text-6xl">Our Story</h1>
+                <div class="px-10 pb-10 lg:hidden">
+                    <p class="font-poppins text-[#626567]">Avis Tailors was formed in the year 1989. It was started by a
+                        group of friends, in avis tailors our main goal is to provide customers well tailored clothes,
+                        we stitch clothes that fit you good and make you feel comfortable.</p>
+                </div>
+            </div>
+            <div class="hidden lg:block">
+                <div class="p-10 pt-32">
+                    <p class="font-poppins text-2xl text-[#626567]">Avis Tailors was formed in the year 1989. It was
+                        started by a group of friends, in avis tailors our main goal is to provide customers well
+                        tailored clothes, we stitch clothes that fit you good and make you feel comfortable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4 px-10  py-5 sm:max-w-lg mx-auto lg:mx-0 lg:max-w-full">
+        <h1 class="col-span-2 font-dmserif font-bold text-primary text-4xl pt-5 lg:pl-16 lg:text-6xl">Founders</h1>
+        <div class="col-span-2 text-center py-4 lg:col-span-1 lg:p-16">
+            <img class="drop-shadow-lg sm:p-10" src="./assets/founder2.67754a9a.png" alt="">
+            <div class="justify-center items-center flex space-x-1">
+                <h1 class="font-poppins font-bold pt-4 sm:text-2xl lg:text-4xl">Challa Ramu</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-4 text-[#3498DB] lg:h-7 lg:w-7"
+                    viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <h2 class="font-dmserif font-bold text-secondary sm:text-xl lg:text-2xl">Founder</h2>
+        </div>
+        <div class="col-span-2 text-center py-4 lg:col-span-1 lg:p-16">
+            <img class="drop-shadow-lg sm:p-10" src="./assets/founder1.590baa44.png" alt="">
+            <div class="justify-center items-center flex space-x-1">
+                <h1 class="font-poppins font-bold pt-4 sm:text-2xl lg:text-4xl">Challa Srinu</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-4 text-[#3498DB] lg:h-7 lg:w-7"
+                    viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <h2 class="font-dmserif font-bold text-secondary sm:text-xl lg:text-2xl">Co-Founder</h2>
+        </div>
+    </div>
+    <h1
+        class="font-dmserif font-bold text-primary text-4xl py-5 px-10 sm:max-w-lg mx-auto lg:mx-0 lg:max-w-full lg:pl-16 lg:text-6xl">
+        We have 10,000+ happy customers.</h1>
+    <div class="bg-basic bg-no-repeat w-full h-96 bg-fixed opacity-75 overflow-hidden"
+        style="background-image: url('./assets/customers.4ce3fc58.svg')">
+    </div>
+    <div id="3" class="bg-neutral py-4  sm:max-w-lg mx-auto grid lg:grid-cols-3 lg:mx-0 lg:max-w-full">
+        <h1 class="font-dmserif text-primary text-4xl font-bold px-10 pt-5 lg:col-span-3 lg:pl-16 lg:text-6xl lg:py-8">
+            Contact Us</h1>
+        <div class="lg:pl-16">
+            <div class="items-center space-x-1 flex">
+                <h2 class="font-poppins text-secondary font-bold pl-10 py-4 text-xl lg:text-2xl">Address</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 my-4 text-secondary" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <p class="font-poppins text-[#626567] font-bold px-10 pb-4 lg:text-xl">
+                Opp to Bommana Brothers,
+                Venkataramana Complex,
+                Bhimavaram,
+                534201
+            </p>
+        </div>
+        <div>
+            <div class="items-center space-x-1 flex">
+                <h2 class="font-poppins text-secondary font-bold pl-10 py-4 text-xl lg:text-2xl">Phone</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 my-4 text-secondary" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+            </div>
+            <h3 class="font-poppins text-[#626567] font-bold px-10 pb-4 lg:text-xl">9247559114</h3>
+            <h3 class="font-poppins text-[#626567] font-bold px-10 pb-4 lg:text-xl">9948836022</h3>
+        </div>
+        <div>
+            <div class="items-center space-x-1 flex">
+                <h2 class="font-poppins text-secondary font-bold pl-10 py-4 text-xl lg:text-2xl">Whatsapp</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 my-4 text-secondary" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"
+                        clip-rule="evenodd" />
+                </svg>
+            </div>
+            <a href="https://wa.me/919247559114" target="_blank"
+                class="font-poppins text-[#626567] font-bold px-10 pb-4 cursor-pointer lg:text-xl">9247559114</a>
+        </div>
+        <div>
+        </div>
+    </div>
+    <div class="text-center bg-basic p-10">
+        <span class="text-sm tracking-wide font-poppins text-[#626567] font-bold">Copyright © Avis Tailors <span
+                id="year"></span> | All right reserved</span>
+    </div>
+</body>
+
+</html>
